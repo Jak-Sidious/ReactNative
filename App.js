@@ -77,7 +77,7 @@ export default class Touchables extends Component {
           </View>
         </TouchableOpacity>
         <TouchableNativeFeedback 
-          onPress={this._onPressButton} 
+          onPress={this._onPressButton}
           background={
             Platform.OS === "android"
               ? TouchableNativeFeedback.SelectableBackground()
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     width: 260,
     alignItems: 'center',
-    backgroundColor: '#2196F3'
+    backgroundColor: "#2196F3"
   },
   buttonText: {
     padding: 20,
@@ -125,4 +125,4 @@ const styles = StyleSheet.create({
 });
 
 // skip this line if using Create React Native App
-AppRegistry.registerComponent('AwesomeProject', () => Touchables);
+AppRegistry.registerComponent("AwesomeProject", () => Touchables);
