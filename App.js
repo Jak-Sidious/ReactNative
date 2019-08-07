@@ -47,7 +47,7 @@ import { AppRegistry, SectionList, StyleSheet, Text, View } from "react-native";
 export default class SectionListBasics extends Component {
   render() {
     return (
-      <View style={StyleSheet.container}>
+      <View style={styles.container}>
         <SectionList
           sections={[
             { title: "D", data: ["Devin"] },
@@ -64,9 +64,9 @@ export default class SectionListBasics extends Component {
               ]
             }
           ]}
-          renderItem={({ item }) => <Text style={StyleSheet.item}>{item}</Text>}
+          renderItem={({ item }) => <Text style={styles.item}>{item}</Text>}
           renderSectionHeader={({ section }) => (
-            <Text style={StyleSheet.sectionHeader}>{section.title}</Text>
+            <Text style={styles.sectionHeader}>{section.title}</Text>
           )}
           keyExtractor={(item, index) => index}
         />
@@ -96,4 +96,5 @@ const styles = StyleSheet.create({
   }
 });
 
-AppRegistry.registerComponent("AwsomeProject", () => SectionListBasics);
+// skip this line if using Create React Native App
+AppRegistry.registerComponent("AwesomeProject", () => SectionListBasics);
