@@ -18,7 +18,14 @@ import { createAppContainer, createStackNavigator } from "react-navigation";
 // }
 class HomeScreen extends React.Component {
   static navigationOptions = {
-    title: "Home"
+    title: "Home",
+    headerStyle: {
+      backgroundColor: "#000"
+    },
+    headerTintColor: `#fff`,
+    headerTitleStyle: {
+      fontWeight: "bold"
+    }
   };
   //Routing while passing params
   render() {
@@ -107,6 +114,13 @@ class DetailsScreen extends React.Component {
         <Button
           title="Go back"
           onPress={() => this.props.navigation.goBack()}
+        />
+        <Button
+          //Set params on click
+          title="Update the title"
+          onPress={() =>
+            this.props.navigation.setParams({ otherParam: "Updated!" })
+          }
         />
       </View>
     );
