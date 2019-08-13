@@ -17,6 +17,9 @@ import { createAppContainer, createStackNavigator } from "react-navigation";
 //   }
 // }
 class HomeScreen extends React.Component {
+  static navigationOptions = {
+    title: "Home"
+  };
   //Routing while passing params
   render() {
     return (
@@ -64,6 +67,9 @@ class HomeScreen extends React.Component {
 // }
 
 class DetailsScreen extends React.Component {
+  static navigationOptions = {
+    title: "Details"
+  };
   //Routing to deal with params
   render() {
     const { navigation } = this.props;
