@@ -1,17 +1,16 @@
 import React from "react";
-import { View, Text } from "react-native";
-import {
-  creareStackNavigator,
-  createAppContainer,
-  createStackNavigator
-} from "react-navigation";
+import { Button, View, Text } from "react-native";
+import { createAppContainer, createStackNavigator } from "react-navigation";
 
 class HomeScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>HomeScreen</Text>
-        <Text>Blah blah blah</Text>
+        <Text>Home Screen</Text>
+        <Button
+          title="Go to details"
+          onPress={() => this.props.navigation.navigate("Details")}
+        />
       </View>
     );
   }
@@ -21,7 +20,7 @@ class DetailsScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>DetailsScreen</Text>
+        <Text>Details Screen</Text>
       </View>
     );
   }
