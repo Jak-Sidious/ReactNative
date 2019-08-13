@@ -67,11 +67,21 @@ class HomeScreen extends React.Component {
 // }
 
 class DetailsScreen extends React.Component {
-  static navigationOptions = {
-    title: "Details"
+  //Hardcoded version
+  // static navigationOptions = {
+  //   title: "Details"
+  // };
+
+  //Getting title from passed params
+  static navigationOptions = ({ navigation }) => {
+    return {
+      title: navigation.getParam("otherParam", "A nested Details Screen")
+    };
   };
+
   //Routing to deal with params
   render() {
+    //Basic setting of sending and recieving params
     const { navigation } = this.props;
     const itemId = navigation.getParam("itemId", "NO-ID");
     const otherParam = navigation.getParam("otherParam", "nothing at all foo");
