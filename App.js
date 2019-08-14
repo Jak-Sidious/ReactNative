@@ -18,14 +18,7 @@ import { createAppContainer, createStackNavigator } from "react-navigation";
 // }
 class HomeScreen extends React.Component {
   static navigationOptions = {
-    title: "Home",
-    headerStyle: {
-      backgroundColor: "#000"
-    },
-    headerTintColor: `#fff`,
-    headerTitleStyle: {
-      fontWeight: "bold"
-    }
+    title: "Home"
   };
   //Routing while passing params
   render() {
@@ -141,7 +134,16 @@ const AppNavigator = createStackNavigator(
     Details: DetailsScreen
   },
   {
-    initialRouteName: "Home"
+    initialRouteName: "Home",
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: "#000"
+      },
+      headerTintColor: `#fff`,
+      headerTitleStyle: {
+        fontWeight: "bold"
+      }
+    }
   }
 );
 
