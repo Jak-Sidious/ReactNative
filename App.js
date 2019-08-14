@@ -17,14 +17,51 @@ import { createAppContainer, createStackNavigator } from "react-navigation";
 //   }
 // }
 class HomeScreen extends React.Component {
-  static navigationOptions = {
-    title: "Home"
+  /** Basic Implementation Without using state
+   * Using HeaderRight will not work for android devices properly
+   */
+  // static navigationOptions = {
+  //   headerTitle: "Home",
+  //   headerRight: (
+  //     <Button
+  //       onPress={() => alert("This is a button!")}
+  //       title="Info"
+  //       color="#fff"
+  //     />
+  //   )
+  // };
+
+  /** Modifying Navigation to utilise state */
+  static navigationOptions = ({ navigation }) => {
+    return {
+      headerTitle: "Home",
+      headerRight: (
+        <Button
+          onPress={navigation.getParam("increaseCount")}
+          title="+1"
+          color={Platform.OS === "ios" ? "#fff" : null}
+        />
+      )
+    };
+  };
+
+  componentDidMount() {
+    this.props.navigation.setParams({ increaseCount: this._increaseCount });
+  }
+
+  state = {
+    count: 0
+  };
+
+  _increaseCount = () => {
+    this.setState({ count: this.state.count + 1 });
   };
   //Routing while passing params
   render() {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <Text>Home Screen</Text>
+        <Text>Count: {this.state.count}</Text>2
         <Button
           title="Go to details"
           onPress={() => {
