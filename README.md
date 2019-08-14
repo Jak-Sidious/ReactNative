@@ -32,7 +32,14 @@ Loading dependency graph, done.
 after which the variations for each platform is as follows
 
 * Android setup.
-  * Make sure you have an android Emulator up and Running
+  * List all available avds by running this command ```~/Library/Android/sdk/tools/emulator -list-avds```
+    * ```console
+        Instrumentation_S9_API_28
+        Normal_Pixel_2_API_28
+        ```
+  * Launch the emulator by running the either of the commands below;
+    * ```~/Library/Android/sdk/tools/emulator -avd <your emulator name here>```
+    * ```~/Library/Android/sdk/emulator/emulator -avd <your emulator name here>```
   * Within the second terminal instance run the command ``` react-native run-android```
   * This should fire up your App in the emulator
 
