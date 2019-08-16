@@ -32,11 +32,24 @@ Loading dependency graph, done.
 after which the variations for each platform is as follows
 
 * Android setup.
-  * Make sure you have an android Emulator up and Running
+  * List all available avds by running this command ```~/Library/Android/sdk/tools/emulator -list-avds```
+    * ```console
+        Instrumentation_S9_API_28
+        Normal_Pixel_2_API_28
+        ```
+  * Launch the emulator by running the either of the commands below;
+    * ```~/Library/Android/sdk/tools/emulator -avd <your emulator name here>```
+    * ```~/Library/Android/sdk/emulator/emulator -avd <your emulator name here>```
   * Within the second terminal instance run the command ``` react-native run-android```
   * This should fire up your App in the emulator
 
-* iOS setup
- * When trying to run this fresh out of the *ProjectFolder/ios* directory, certain dependencies are missing.
- * You will need to drop into the above named folder and run the command ``` pod init``` if the directory doesn't exist followed by ```pod install``` to create the cocoapods dependencies.
- * Once done, open your ios workspace project and delete the build from the ios ProjectFolder followed by running the command ```react-native run-ios``` to get the welcome to effectively display
+* iOS setup.
+  * When trying to run this fresh out of the *ProjectFolder/ios* directory, certain dependencies are missing.
+  * You will need to drop into the above named folder and run the command ``` pod init``` if the directory doesn't exist followed by ```pod install``` to create the cocoapods dependencies.
+  * Once done, open your ios workspace project and delete the build from the ios ProjectFolder followed by running the command ```react-native run-ios``` to get the welcome to effectively display
+
+ ## Setting up Navigation
+ In order to setup React Navigation, run the following Commands
+ * ```npm install --save react-navigation```
+ * ```npm install --save react-native-gesture-handler```
+ *  At this point cd into the `ios` Directory in the application folder and run the command ```pod install``` as the Andrioid Linking is automatic. At this point the linking shall be set and the design is fully on the developer
