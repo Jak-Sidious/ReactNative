@@ -43,10 +43,10 @@ after which the variations for each platform is as follows
   * Within the second terminal instance run the command ``` react-native run-android```
   * This should fire up your App in the emulator
 
-* iOS setup
- * When trying to run this fresh out of the *ProjectFolder/ios* directory, certain dependencies are missing.
- * You will need to drop into the above named folder and run the command ``` pod init``` if the directory doesn't exist followed by ```pod install``` to create the cocoapods dependencies.
- * Once done, open your ios workspace project and delete the build from the ios ProjectFolder followed by running the command ```react-native run-ios``` to get the welcome to effectively display
+* iOS setup.
+  * When trying to run this fresh out of the *ProjectFolder/ios* directory, certain dependencies are missing.
+  * You will need to drop into the above named folder and run the command ``` pod init``` if the directory doesn't exist followed by ```pod install``` to create the cocoapods dependencies.
+  * Once done, open your ios workspace project and delete the build from the ios ProjectFolder followed by running the command ```react-native run-ios``` to get the welcome to effectively display
 
  ## Setting up Navigation
  In order to setup React Navigation, run the following Commands
